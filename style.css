@@ -1,9 +1,14 @@
 :root {
-    --primary-bg: #E0E0E0; /* Light grey for general page background */
-    --secondary-bg: #8EC6E6; /* Light blue for cards and distinct sections */
-    --header-bg: #2E3E50; /* Dark blue/grey for header and main text */
-    --text-color: #2E3E50; /* Dark blue/grey for most text */
-    --accent-color: #000000; /* Black for strong accents like game card titles */
+    --primary-bg: #E0E0E0;
+    /* Light grey for general page background */
+    --secondary-bg: #8EC6E6;
+    /* Light blue for cards and distinct sections */
+    --header-bg: #2E3E50;
+    /* Dark blue/grey for header and main text */
+    --text-color: #2E3E50;
+    /* Dark blue/grey for most text */
+    --accent-color: #000000;
+    /* Black for strong accents like game card titles */
     --shadow-color: rgba(0, 0, 0, 0.1);
     --border-radius: 10px;
 }
@@ -15,7 +20,8 @@
 }
 
 body {
-    font-family: 'Rubik', sans-serif; /* Changed font to Rubik */
+    font-family: 'Rubik', sans-serif;
+    /* Changed font to Rubik */
     background-color: var(--primary-bg);
     color: var(--text-color);
     line-height: 1.6;
@@ -26,7 +32,8 @@ body {
 
 .main-header {
     background-color: var(--header-bg);
-    color: var(--secondary-bg); /* H1 will be light blue on dark blue/grey header */
+    color: var(--secondary-bg);
+    /* H1 will be light blue on dark blue/grey header */
     padding: 1.5rem 1rem;
     text-align: center;
     box-shadow: 0 4px 6px var(--shadow-color);
@@ -53,13 +60,15 @@ body {
 }
 
 .game-card {
-    background-color: var(--secondary-bg); /* Light blue background */
+    background-color: var(--secondary-bg);
+    /* Light blue background */
     padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: 0 5px 15px var(--shadow-color);
     text-align: center;
     text-decoration: none;
-    color: var(--text-color); /* Dark blue/grey text */
+    color: var(--text-color);
+    /* Dark blue/grey text */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -74,7 +83,8 @@ body {
 }
 
 .game-card h3 {
-    color: var(--accent-color); /* Black for emphasis */
+    color: var(--accent-color);
+    /* Black for emphasis */
     font-size: 1.75rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
@@ -82,11 +92,13 @@ body {
 
 .game-card p {
     font-size: 1rem;
-    color: var(--text-color); /* Updated to use palette variable */
+    color: var(--text-color);
+    /* Updated to use palette variable */
 }
 
 .info-card {
-    background-color: var(--secondary-bg); /* Light blue background */
+    background-color: var(--secondary-bg);
+    /* Light blue background */
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: 0 5px 15px var(--shadow-color);
@@ -94,7 +106,8 @@ body {
 }
 
 .info-card h2 {
-    color: var(--header-bg); /* Dark blue/grey for title */
+    color: var(--header-bg);
+    /* Dark blue/grey for title */
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -110,7 +123,8 @@ body {
 
 .tedi-photo {
     max-width: 100%;
-    width: 600px; /* Max width for the image */
+    width: 600px;
+    /* Max width for the image */
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: 0 3px 10px var(--shadow-color);
@@ -120,17 +134,22 @@ body {
     font-size: 1.1rem;
     margin-bottom: 1rem;
     text-align: justify;
-    max-width: 800px; /* Limit text width for readability */
-    color: var(--text-color); /* Updated to use palette variable */
+    max-width: 800px;
+    /* Limit text width for readability */
+    color: var(--text-color);
+    /* Updated to use palette variable */
 }
 
 /* New Footer Styles */
 .main-footer {
-    background-color: var(--header-bg); /* Dark blue/grey background */
-    color: var(--primary-bg); /* Light grey text for contrast */
+    background-color: var(--header-bg);
+    /* Dark blue/grey background */
+    color: var(--primary-bg);
+    /* Light grey text for contrast */
     text-align: center;
     padding: 1rem;
-    margin-top: 3rem; /* Add some space above the footer */
+    margin-top: 3rem;
+    /* Add some space above the footer */
     box-shadow: 0 -2px 6px var(--shadow-color);
     font-size: 0.9rem;
 }
@@ -181,5 +200,28 @@ body {
 
     .info-card h2 {
         font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .about-content {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 2rem;
+    }
+
+    .tedi-photo {
+        width: 40%;
+        max-width: 400px;
+        margin-right: 0;
+    }
+
+    .about-text {
+        flex: 1;
+    }
+
+    .info-card p {
+        text-align: left;
     }
 }
